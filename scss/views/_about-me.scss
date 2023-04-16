@@ -1,0 +1,202 @@
+/* ------ About Me ------ */
+
+@mixin aboutme-image {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  margin-top: 100px;
+  margin-right: 80px;
+  z-index: 1;
+}
+
+@mixin p-fonts {
+  font-size: 115%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* About Me - Mobile styles */
+
+@media only screen and (max-width: 767px) {
+  .aboutme-image {
+    @include aboutme-image;
+    display: none;
+  }
+  
+  .aboutme-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .aboutme-biography {
+    padding: 20px;
+    margin-top: 50px;
+    max-width: 450px;
+    width: 100%;
+    
+    h2 {
+      margin-bottom: 35px;
+    }
+    
+    p {
+      @include p-fonts;
+    }
+  }
+  
+  .aboutme-buttons-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  .aboutme-buttons {
+    background-color: black;
+    border-radius: 30px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    padding: 15px 50px;
+    padding-left: 25px;
+    width: 70px;
+    
+    a {
+      color: white;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: #e23004;
+      color: #333;
+      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+/* About Me - Tablet styles */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .aboutme-image {
+    @include aboutme-image;
+    display: none;
+  }
+
+  .aboutme-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .aboutme-biography {
+      padding: 20px;
+      margin-top: 50px;
+      max-width: 450px;
+      width: 100%;
+
+      h2 {
+        margin-bottom: 35px;
+      }
+
+      p {
+        @include p-fonts;
+      }
+    }
+
+    .aboutme-buttons-container {
+      display: inline-block;
+      justify-content: left;
+      align-items: center;
+      z-index: 0;
+
+      .aboutme-buttons {
+        background-color: black;
+        border-radius: 30px;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        margin-top: 15px;
+        padding: 15px 50px;
+        padding-left: 25px;
+        width: 70px;
+
+        a {
+          color: white;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          background-color: #e23004;
+          color: #333;
+          font-size: 18px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+/* About Me - PC styles */
+
+@media only screen and (min-width: 992px) {
+  .aboutme-image {
+    @include aboutme-image;
+  }
+
+  .aboutme-container {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    
+    .aboutme-biography {
+      padding: 20px;
+      margin-top: 50px;
+      margin-left: 300px;
+      max-width: 450px;
+      width: 100%;
+
+      h2 {
+        margin-bottom: 35px;
+      }
+
+      p {
+        @include p-fonts;
+      }
+    }
+
+    .aboutme-buttons-container {
+      display: inline-block;
+      justify-content: left;
+      align-items: center;
+      z-index: 0;
+
+      .aboutme-buttons {
+        background-color: black;
+        border-radius: 30px;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        margin-top: 10px;
+        padding: 15px 50px;
+        padding-left: 25px;
+        width: 70px;
+
+        a {
+          color: white;
+          white-space: nowrap;
+        }
+
+        &:hover {
+          background-color: #e23004;
+          color: #333;
+          font-size: 18px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
